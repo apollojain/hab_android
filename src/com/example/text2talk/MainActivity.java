@@ -8,7 +8,7 @@ import android.app.Activity;
 import android.content.res.Configuration;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Build;
+//import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -89,7 +89,11 @@ public class MainActivity extends ActionBarActivity {
     }
     
     
-    public void speakText(View view){
+    public void speakText(View view){ 
+    	/*
+    	 * A View occupies a rectangular area on the screen and is responsible for drawing and event handling. 
+    	 * View is the base class for widgets, which are used to create interactive UI components (buttons, text fields, etc.).
+    	 */
         String toSpeak = write.getText().toString();
         //basically, we're taking the text from the write EditText and putting it into toSpeak
         Toast.makeText(getApplicationContext(), toSpeak, Toast.LENGTH_SHORT).show();

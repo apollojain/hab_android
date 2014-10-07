@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:onClick="speakText"
         android:layout_margin="10dp"
-        android:layout_width="220dp"
+        android:layout_width="match_parent"
         android:background="@drawable/button_speak" />
 
 </LinearLayout>
