@@ -47,16 +47,19 @@ labs and projects.
 
 Unless otherwise stated, all these steps are executed from within Eclipse.
 
-1) Help menu -> Check for updates
+#### Part 1 ####
+Help menu -> Check for updates
 Be sure you are running the latest version of Eclipse.
 </br>
-2) Window menu -> Android SDK Manager
+#### Part 2 ####
+Window menu -> Android SDK Manager
 Install the following API if it is not already installed.
  - Android 4.4.2 (API 19)
 </br>
 You can check if it is installed by looking at the "Status" column on the right.
 </br>
-3) Eclipse -> Window -> Android Virtual Device Manager
+#### Part 3 ####
+Eclipse -> Window -> Android Virtual Device Manager
 
 Create a New... Android Virtual Device
 Give your device a name like "4.4.2AndroidDevice"  (The name cannot have spaces.)
@@ -65,7 +68,8 @@ Choose Target: Android 4.4.2 - API Level 19
 Choose CPU/ABI of "ARM" (currently the most prevalent processor)
 Click "OK"
 </br>
-4) Start the Android Virtual Device
+#### Part 4 ####
+Start the Android Virtual Device
 Select 4.4.2AndroidDevice
 Click "Start..."
 Click "Launch"
@@ -76,34 +80,48 @@ unlock the phone. It can take a couple minutes to get the AVD fully going.
 Sometimes the first time the AVD is launched it seems to not show the lock.
 Try clicking on the Home button.
 
-Step 3: Creating a User Interface (Part I)
+Step 3: Creating a User Interface (Episode I: The UI Menace)
 ==========================================
-1) Move your mouse to the left-hand panel
-2) Go to Text2Talk -> res -> layout -> activity_main.xml
-3) Click on "activity_main.xml" near the bottom of the screen
-4) Delete all text
-5) Go to Palette -> Layouts and drag a "Linear Layout (Vertical) into the 
+#### Part 1 ####
+Move your mouse to the left-hand panel
+#### Part 2 ####
+Go to Text2Talk -> res -> layout -> activity_main.xml
+#### Part 3 ####
+Click on "activity_main.xml" near the bottom of the screen
+#### Part 4 ####
+Delete all text
+#### Part 5 ####
+Go to Palette -> Layouts and drag a "Linear Layout (Vertical) into the 
 gray space in the center of the screen
-6) Go to Palette -> Form Widgets and drag a Large Text View (the thing that 
+#### Part 6 ####
+Go to Palette -> Form Widgets and drag a Large Text View (the thing that 
 says "Large") into the gray area of your screen.
-7) Go to the right hand side of the screen and scroll down to "Gravity". Type 
+#### Part 7 ####
+Go to the right hand side of the screen and scroll down to "Gravity". Type 
 "center_horizontal" into the input field.  This should center your title. 
-8) Now on the right hand side of your screen, scroll up to "Padding Top" and 
+#### Part 8 ####
+Now on the right hand side of your screen, scroll up to "Padding Top" and 
 type 20dp. This will shift your title down a little bit. 
-9) Go to "Text" on the right hand side of the screen and enter "@string/app_name" 
+#### Part 9 ####
+Go to "Text" on the right hand side of the screen and enter "@string/app_name" 
 into the input box. Where is this coming from, you ask? Let's look!
-10) Go to Resources at the bottom of the screen. Click the "strings.xml" button. 
+#### Part 10 ####
+Go to Resources at the bottom of the screen. Click the "strings.xml" button. 
 Below the string labelled "action_settings, type: 
 ```xml
 ...
 <string name="title">Text2Talk</string>
 ...
 ```
-11) Now go to Palette -> Text Fields under the Large Text
-12) Type "center_horizontal" into Gravity. Change the "Padding Top" to 20dp. 
-13) Go to Palette -> Form Widgets and drag a Button into the gray area of your 
+#### Part 11 ####
+Now go to Palette -> Text Fields under the Large Text
+#### Part 12 ####
+Type "center_horizontal" into Gravity. Change the "Padding Top" to 20dp. 
+#### Part 13 ####
+Go to Palette -> Form Widgets and drag a Button into the gray area of your 
 screen. 
-14) Go down to "Width" in the right-hand panel and type "fill_parent" into your 
+#### Part 14 ####
+Go down to "Width" in the right-hand panel and type "fill_parent" into your 
 text box
 
 Congrats! You've just made an Android User Interface Layout! Pat yourselves on the back!
