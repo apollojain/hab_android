@@ -15,7 +15,7 @@ Step 0: Before you begin
 =========================
 Remember to do the following:
 * Use Google! Results from [stackoverflow.com](http://stackoverflow.com) are an amazing resource. You get to utilize the knowledge of the global computer science developer community. However, don't just copy-paste answers from the web. Make sure you understand exactly what's going on before you copy-paste anything.
-* Ask your neighbours. Working in groups is extremely productive as each of you can fill the gaps of knowledge the others have. Also, it's a good opportunity to make friends and find future potential project partners!
+* Ask your neighbors. Working in groups is extremely productive as each of you can fill the gaps of knowledge the others have. Also, it's a good opportunity to make friends and find future potential project partners!
 * Ask H@B members for help. Hack Jam is a learning experience for most people. It's a good time to take on something new so many people will be in your situation. Don't be afraid to ask people at Hack Jam for help. Chances are, they'll be able to assist you in some way.
 
 With all this in mind, several H@B members have volunteered to assist people with the beginner hack. So, if you ever need help, look for these awesome people:
@@ -49,13 +49,13 @@ Unless otherwise stated, all these steps are executed from within Eclipse.
 
 1) Help menu -> Check for updates
 Be sure you are running the latest version of Eclipse.
-
+</br>
 2) Window menu -> Android SDK Manager
 Install the following API if it is not already installed.
  - Android 4.4.2 (API 19)
-
+</br>
 You can check if it is installed by looking at the "Status" column on the right.
-
+</br>
 3) Eclipse -> Window -> Android Virtual Device Manager
 
 Create a New... Android Virtual Device
@@ -64,12 +64,12 @@ Choose a Device such as Nexus S (be sure you choose a smartphone, not a tablet)
 Choose Target: Android 4.4.2 - API Level 19
 Choose CPU/ABI of "ARM" (currently the most prevalent processor)
 Click "OK"
-
+</br>
 4) Start the Android Virtual Device
 Select 4.4.2AndroidDevice
 Click "Start..."
 Click "Launch"
-
+</br>
 At this point, the new Android Virtual Device (AVD) should start up. Once the
 AVD is fully started, you drag the lock to the right to the unlock icon to 
 unlock the phone. It can take a couple minutes to get the AVD fully going. 
@@ -90,8 +90,8 @@ says "Large") into the gray area of your screen.
 "center_horizontal" into the input field.  This should center your title. 
 8) Now on the right hand side of your screen, scroll up to "Padding Top" and 
 type 20dp. This will shift your title down a little bit. 
-9) Go to "Text" on the right hand side of the screen and enter "@string/title" 
-into the input box. It'll show you an error. We'll fix that soon. 
+9) Go to "Text" on the right hand side of the screen and enter "@string/app_name" 
+into the input box. Where is this coming from, you ask? Let's look!
 10) Go to Resources at the bottom of the screen. Click the "strings.xml" button. 
 Below the string labelled "action_settings, type: 
 ```xml
