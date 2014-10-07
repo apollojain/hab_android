@@ -74,11 +74,18 @@ public class MainActivity extends ActionBarActivity {
 	
     @Override
     public void onPause(){
+    	/*
+         * If you leave the program you want to make sure it doesn't crash
+         * 
+         */
+    	
         if(ttobj != null){
             ttobj.stop();
             ttobj.shutdown();
         }
+       
         super.onPause();
+        
     }
     
     
