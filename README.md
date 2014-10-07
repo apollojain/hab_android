@@ -16,9 +16,9 @@ Step 0: Before you begin
 Remember to do the following:
 * Use Google! Results from [stackoverflow.com](http://stackoverflow.com) are an amazing resource. You get to utilize the knowledge of the global computer science developer community. However, don't just copy-paste answers from the web. Make sure you understand exactly what's going on before you copy-paste anything.
 * Ask your neighbors. Working in groups is extremely productive as each of you can fill the gaps of knowledge the others have. Also, it's a good opportunity to make friends and find future potential project partners!
-* Ask H@B members for help. Hack Jam is a learning experience for most people. It's a good time to take on something new so many people will be in your situation. Don't be afraid to ask people at Hack Jam for help. Chances are, they'll be able to assist you in some way.
+* Ask H@B members for help. That's what they're here to do! 
 
-With all this in mind, several H@B members have volunteered to assist people with the beginner hack. So, if you ever need help, look for these awesome people:
+With all this in mind, several H@B members have volunteered to assist people with creating this workshop. So, if you ever need help, look for these awesome people:
 
 <table>
     <tr>
@@ -29,17 +29,24 @@ With all this in mind, several H@B members have volunteered to assist people wit
     </tr>
 </table>
 
-Step 1:  Creating a new Android Application
+Episode I: The Eclipse Menace
 ============================================
-1) Go to File -> New -> Android Application Project
-2) Name your project Text2Talk (although you can pretty much name it whatever you want to)
-	* change "example" in the package name to your name or your company name. Otherwise, you will not be able to upload your app to the app store
-3) Change Target API to API 19 and the "Compile with" to API 19 as well. When the API is set 20 or above, there are sometimes issues with rendering text boxes (EditTexts)
-4) Uncheck "Create custom launcher icon"
-5) Check "Blank Activity"
-6) Keep clicking next after this and then click "Finish"
+First of all, you need to actually open Eclipse! Let's do it. 
+* If you haven't already, extract your ADT bundle (the zip folder from the Android website, which you can download
+from the link on the Android Workshop Facebook Page) to somewhere you can easily access it. 
+* Open this folder and click on "eclipse"
+* Double click on "eclipse.exe"
+* ADT should start up
 
-Step 2: Creating an Android (AVD) Emulator
+Now, let's create a project!
+* Go to File -> New -> Android Application Project
+* Name your project Text2Talk (although you can pretty much name it whatever you want to). Change "example" in the package name to your name or your company name. Otherwise, you will not be able to upload your app to the app store
+* Change Target API to API 19 and the "Compile with" to API 19 as well. When the API is set 20 or above, there are sometimes issues with rendering text boxes (EditTexts)
+* Uncheck "Create custom launcher icon"
+* Check "Blank Activity"
+* Keep clicking next after this and then click "Finish"
+
+Episode II: Attack of the Android (AVD) Emulator
 ==========================================
 
 Use the following steps to install a stable Android Virtual Device for use in DS
@@ -80,7 +87,7 @@ unlock the phone. It can take a couple minutes to get the AVD fully going.
 Sometimes the first time the AVD is launched it seems to not show the lock.
 Try clicking on the Home button.
 
-Step 3: Creating a User Interface (Episode I: The UI Menace)
+Episode III: Revenge of the User Interface
 ==========================================
 #### Part 1 ####
 Move your mouse to the left-hand panel.
@@ -126,14 +133,16 @@ modify it so it looks like this:
         android:text="@string/button" />
 ...
 ```
-
+In case you're curious, the "onClick" attribute is basically a "listener" that waits for you to click it. 
+It will then trigger the "speakText" function, which we will write in our Java code. 
 
 
 Congrats! You've just made an Android User Interface Layout! Pat yourselves on the back!
 
-Step 4: Now, onto coding!
+Episode IV: A Java Hope
 ==========================================
 
+Now, let's program our app!
 #### Part 1 ####
 First let's deal with adding some UI elements and seeing what happens onCreate.
 Type the code below. Try not to just copy and paste, as it really helps to have 
