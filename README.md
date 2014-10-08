@@ -103,15 +103,14 @@ gray space in the center of the screen
 
 #### Part 3 ####
 Go to Palette -> Form Widgets and drag a Large Text View (the thing that 
-says "Large") into the gray area of your screen. Go to the right hand side of the screen and scroll down to "Gravity". Type 
-"center_horizontal" into the input field.  This should center your title. 
+says "Large") into the gray area of your screen. Go to the right hand side of the screen and scroll down to "Gravity". Type "center_horizontal" into the input field.  Also be sure to change the width to "fill_parent." This should center your title.
 Now on the right hand side of your screen, scroll up to "Padding Top" and 
 type 20dp. This will shift your title down a little bit. 
 
 #### Part 4 ####
 Go to "Text" on the right hand side of the screen and enter "@string/app_name" 
 into the input box. This will change the Text View's contents to the name of your app. 
-If you want to see where this comes from, go to Resources at the bottom of the screen. Click the "strings.xml" button. 
+If you want to see where this comes from, go to res -> values -> strings.xml. 
 Below the string labelled "action_settings, type: 
 ```xml
 ...
