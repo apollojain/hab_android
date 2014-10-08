@@ -11,7 +11,7 @@ After you finish this, you'll have:
 * Learned the basics of creating an awesome UI
 * Learned how to create UI fragments
 
-Step 0: Before you begin
+Before you begin
 =========================
 Remember to do the following:
 * Use Google! Results from [stackoverflow.com](http://stackoverflow.com) are an amazing resource. You get to utilize the knowledge of the global computer science developer community. However, don't just copy-paste answers from the web. Make sure you understand exactly what's going on before you copy-paste anything.
@@ -56,6 +56,7 @@ Unless otherwise stated, all these steps are executed from within Eclipse.
 
 #### Part 1 ####
 Help menu -> Check for updates
+
 Be sure you are running the latest version of Eclipse.
 
 #### Part 2 ####
@@ -119,7 +120,7 @@ Below the string labelled "action_settings, type:
 ...
 ```
 #### Part 5 ####
-Now go to Palette -> Text Fields under the Large Text.
+Now go to Palette -> Text Fields and drag over a Plain Text field.
 Type "center_horizontal" into Gravity. Change the "Padding Top" to 20dp. 
 Go to Palette -> Form Widgets and drag a Button into the gray area of your 
 screen. Go down to "Width" in the right-hand panel and type "fill_parent" into your 
@@ -206,7 +207,7 @@ wants to, for instance, use another app. Here is the code; place it below your o
 ```
 
 #### Part 3 ####
-Last but not least, let us actually write the method that allows us to convert text to speech. The comments understand how 
+Last but not least, let us actually write the method that allows us to convert text to speech. The comments explain how 
 the magic happens:
 ```java
 ...
@@ -243,4 +244,60 @@ Let's begin by adding a line to our AndroidManifest.xml on the left hand side of
 This will allow us to configure certain things, like the orientation when we change a configuration like screen rotation. 
 
 #### Step 2 ####
-Now, let's actually create the fragment. Open up res and right click on "layout." Next, go to New -> Android XML File and name it "fragment_main.xml". Next, 
+Now, let's actually create the fragment. Open up res and right click on "layout." Next, go to New -> Android XML File and name it "fragment_main.xml". Next, go to your old layout_main.xml file and copy all of your code over. Now, change the <LinearLayout> code to the following.
+
+
+```xml
+...
+    
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#BF5FFF"
+    android:paddingTop="20dp" >
+...
+```
+
+Do something similar for the activity_mail.xml: 
+```xml
+...
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#BF5FFF"
+    android:paddingTop="20dp" >
+...
+```
+
+#### Step 3 ####
+
+Now, we're going to add an onConfigurationChanged android lifecycle method. What this will do is look for changes in the layout orientation
+of our app. If it's portrait, we'll change the fragment to activity_main.xml and if it's landscape, we'll change the fragment to fragment_main.xml. See the code below for more details and comments: 
+
+```java
+...
+    
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        String toSpeak = write.getText().toString();
+        write = (EditText) findViewById(R.id.editText1); //you actually get the EditText
+        // Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.fragment_main);
+            EditText et1 = (EditText)findViewById(R.id.editText1);
+            et1.setText(toSpeak);
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            setContentView(R.layout.activity_main);
+            EditText et1 = (EditText)findViewById(R.id.editText1);
+            et1.setText(toSpeak);
+        }
+    }
+    
+...
+```
