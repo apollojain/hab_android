@@ -2,7 +2,7 @@ Introduction
 ======================
 Welcome to the Intro to Android Workshop!
 
-Never created an Android app? Well, you;
+Never created an Android app? Well, you've come to the right place!
 After you finish this, you'll have:
 
 * Created an Android Virtual Device (AVD) Emulator
@@ -57,14 +57,13 @@ Unless otherwise stated, all these steps are executed from within Eclipse.
 #### Part 1 ####
 Help menu -> Check for updates
 Be sure you are running the latest version of Eclipse.
-</br>
+
 #### Part 2 ####
 Window menu -> Android SDK Manager
 Install the following API if it is not already installed.
  - Android 4.4.2 (API 19)
-</br>
 You can check if it is installed by looking at the "Status" column on the right.
-</br>
+
 #### Part 3 ####
 Eclipse -> Window -> Android Virtual Device Manager
 
@@ -74,13 +73,13 @@ Choose a Device such as Nexus S (be sure you choose a smartphone, not a tablet)
 Choose Target: Android 4.4.2 - API Level 19
 Choose CPU/ABI of "ARM" (currently the most prevalent processor)
 Click "OK"
-</br>
+
 #### Part 4 ####
 Start the Android Virtual Device
 Select 4.4.2AndroidDevice
 Click "Start..."
 Click "Launch"
-</br>
+
 At this point, the new Android Virtual Device (AVD) should start up. Once the
 AVD is fully started, you drag the lock to the right to the unlock icon to 
 unlock the phone. It can take a couple minutes to get the AVD fully going. 
@@ -89,21 +88,26 @@ Try clicking on the Home button.
 
 Episode III: Revenge of the User Interface
 ==========================================
+
 #### Part 1 ####
 Move your mouse to the left-hand panel.
 Go to Text2Talk -> res -> layout -> activity_main.xml.
 Double click on "activity_main.xml" near the bottom of the screen. 
 You should be able to see all of the text currently on the screen.
-Delete all of it.
+Delete all of it. You'll get errors, but that's ok. 
+We want to start from scratch. 
+
 #### Part 2 ####
 Go to Palette -> Layouts and drag a "Linear Layout (Vertical) into the 
 gray space in the center of the screen
+
 #### Part 3 ####
 Go to Palette -> Form Widgets and drag a Large Text View (the thing that 
 says "Large") into the gray area of your screen. Go to the right hand side of the screen and scroll down to "Gravity". Type 
 "center_horizontal" into the input field.  This should center your title. 
 Now on the right hand side of your screen, scroll up to "Padding Top" and 
 type 20dp. This will shift your title down a little bit. 
+
 #### Part 4 ####
 Go to "Text" on the right hand side of the screen and enter "@string/app_name" 
 into the input box. This will change the Text View's contents to the name of your app. 
@@ -223,4 +227,21 @@ the magic happens:
 ...
 ```
 
-* By the way, sorry we couldn't come up with any clever Star Wars references for this particular part. We ran out of ideas...
+Episode V: The Fragments Strike Back
+==================================
+Now, we're going to launch into creating something called a fragment. A Fragment is basically a portion of the UI that you can use independently of your activity. We're going to use it to create different "views" when we align our phone in either portrait or landscape. 
+
+#### Step 1 ####
+Let's begin by adding a line to our AndroidManifest.xml on the left hand side of the screen under the <activity> tag: 
+
+```xml
+...
+    
+            android:configChanges="orientation|screenSize|layoutDirection"
+...
+```
+
+This will allow us to configure certain things, like the orientation when we change a configuration like screen rotation. 
+
+#### Step 2 ####
+Now, let's actually create the fragment. Open up res and right click on "layout." Next, go to New -> Android XML File and name it "fragment_main.xml". Next, 
