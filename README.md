@@ -227,6 +227,9 @@ the magic happens:
 ...
 ```
 
+#### Part 4 ####
+Just a bit of an aside: A quick lesson on debugging! What we're going to do now is go to our TextView
+
 Episode V: The Fragments Strike Back
 ==================================
 Now, we're going to launch into creating something called a fragment. A Fragment is basically a portion of the UI that you can use independently of your activity. We're going to use it to create different "views" when we align our phone in either portrait or landscape. 
@@ -244,7 +247,9 @@ Let's begin by adding a line to our AndroidManifest.xml on the left hand side of
 This will allow us to configure certain things, like the orientation when we change a configuration like screen rotation. 
 
 #### Step 2 ####
-Now, let's actually create the fragment. Open up res and right click on "layout." Next, go to New -> Android XML File and name it "fragment_main.xml". Next, go to your old layout_main.xml file and copy all of your code over. Now, change the <LinearLayout> code to the following.
+Now, let's actually create the fragment. Open up res and right click on "layout." Next, go to New -> Android XML File and name it "fragment_main.xml". This is useful when you want different views for different screen sizes (i.e. a tablet vs. a phone) or if you want to recycle the same fragment for a different Activity (what dictates how the app behaves. In our case, MainActivity converts Text to Speech, but you can create other ones). We will be using it to display different colors when you change the alignment of your screen. 
+
+So, go to your old layout_main.xml file and copy all of your code over. Now, change the <LinearLayout> code to the following.
 
 
 ```xml
@@ -301,3 +306,19 @@ of our app. If it's portrait, we'll change the fragment to activity_main.xml and
     
 ...
 ```
+
+Awesome! You've now created some fragments. If you change your screen orientation, the color of the screen should change. 
+
+Episode VI: Return of the ________________
+=========================================
+Congratulations! You've officially completed your first Android App!
+At this point in time, you've only dipped your feet into the world of Android. There are many more things that you can do with this awesome technology. 
+
+Some other things that you can learn regarding Android include: 
+* Basic Key-Value Storage
+* SQLite Storage
+* Parse SDK (databasing, push notifications, etc.)
+* Google Play SDK
+
+Now it's your turn to create something incredible. Make some cool hacks!
+
